@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gate</title>
+
+    <style>
+
+        .container{
+            
+            float: right;
+            padding-bottom: 400px;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.664);
+            font-size: larger;
+            
+        }
+
+        body{
+            background-image: url(image/cropped-1920-1080-1320687.png);
+            
+        }
+
+        button{
+            float: left;
+            height: 100px;
+            width: 100px;
+            border-radius: 20cm;
+        }
+
+        #port1{
+            background-image: url('image/portrait1.png');
+
+        }
+
+        #button-container{
+            display: inline-flex;
+            
+            
+        }
+        #port2{
+            background-image: url('image/Screenshot_3.png');
+
+        }
+        #port4{
+            background-image: url('image/rain.png');
+
+        }
+
+
+        #port3{
+            background-image: url('image/Screenshot_2.png');
+        }
+
+        #dados{
+            display: block;
+        }
+
+        
+    </style>
+</head>
+<body>
+    
+
+    <div class="button-container">
+        <button onclick="fazer()" type="menu" class="button" id="port1"></button>
+    </div>
+    <div class="button-container2">
+        <button onclick="fazer2()" type="menu" class="button" id="port2"></button>
+    </div>
+    <div class="button-container3">
+        <button onclick="fazer3()" type="menu" class="button" id="port3"></button>
+    </div>
+    <div class="button-container4">
+        <button onclick="fazer4()" type="menu" class="button" id="port4"></button>
+    </div>
+
+    <div class="container">
+        <div id="dados"></div>
+    </div>
+    <div class="container">
+        <div id="dados2"></div>
+    </div>
+
+    <script>
+        //array
+        const json1 =
+         `{
+            "nome": "Bi-han", "codinome": "Sub-zero", "idade": 23, "foto": "<img src= 'image/flat,750x,075,f-pad,750x1000,f8f8f8.jpg'     width= '400px'>", 
+            "nome1": "Kuai-Liang", "codinome1": "Scorpion", "idade1": 23, "foto1": "<img src= 'image/08c91da46d9608ac878835c73c4e9cf0.jpg'     width= '400px'>", 
+            "nome2": "Sysoth", "codinome2": "Reptile", "idade2": 20, "foto2": "<img src= 'image/reptile.png'     width= '400px'>", 
+            "nome3": "Desconhecido", "codinome3": "Rain", "idade3": 32, "foto3": "<img src= 'image/rain2.png'     width= '400px'>"
+
+        }`;
+        const json2 =
+         `{
+            "nome1": "Kuai-Liang", "codinome1": "Scorpion", "idade1": 23, "foto1": "<img src= 'image/08c91da46d9608ac878835c73c4e9cf0.jpg'     width= '400px'>" 
+        }`;
+
+
+        //verificar console
+        console.log(json1);
+        
+
+        //transformando em JSON objeto javascript
+        const data = JSON.parse(json1);
+        
+        //verificar console
+        console.log(data);
+        console.log(data);
+        console.log(data);
+
+        //verificar no navegador - Front end
+        
+
+
+        function fazer(){
+            
+            document.getElementById("dados").innerHTML= "nome: " + data.nome + "<br>" +"Codinome: " + data.codinome + "<br>" + "idade: " + data.idade + "<br>" + data.foto
+            
+
+        }
+        function fazer2(){
+            
+            document.getElementById("dados").innerHTML= "nome: " + data.nome1 + "<br>" +"Codinome: " + data.codinome1 + "<br>" + "idade: " + data.idade1 + "<br>" + data.foto1
+
+        }
+        function fazer3(){
+            
+            document.getElementById("dados").innerHTML= "nome: " + data.nome2 + "<br>" +"Codinome: " + data.codinome2 + "<br>" + "idade: " + data.idade2 + "<br>" + data.foto2
+
+        }
+        function fazer4(){
+            
+            document.getElementById("dados").innerHTML= "nome: " + data.nome3 + "<br>" +"Codinome: " + data.codinome3 + "<br>" + "idade: " + data.idade3 + "<br>" + data.foto3
+
+        }
+
+        
+    </script>
+    
+</body>
+</html>
